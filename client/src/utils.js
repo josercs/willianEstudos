@@ -1,5 +1,3 @@
-// utils.js
-
 export function normalizarStatus(status) {
   return (status || '').trim().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 }
@@ -22,6 +20,7 @@ export function slugify(text) {
     .replace(/\s+/g, '_')
     .toLowerCase();
 }
+
 export function formatarTempo(duracaoMinutos) {
   if (duracaoMinutos === undefined || duracaoMinutos === null) return '';
   const horas = Math.floor(duracaoMinutos / 60);

@@ -16,16 +16,16 @@ const upload = multer();
 // Middlewares
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/pdfs', express.static(path.join(__dirname, 'pdfs')));
+//app.use(express.static(path.join(__dirname, 'public')));
+//app.use('/pdfs', express.static(path.join(__dirname, 'pdfs')));
 
 // Servir arquivos estáticos da pasta public
-app.use(express.static(path.join(__dirname, '../public')));
+//app.use(express.static(path.join(__dirname, '../public')));
 
 // Rota para servir index.html na raiz
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
-});
+//app.get('/', (req, res) => {
+//  res.sendFile(path.join(__dirname, '../public/index.html'));
+//});
 
 // API: Buscar todos os horários
 app.get('/api/horarios', async (req, res) => {
